@@ -1,7 +1,0 @@
-[package]
-name = "avocado"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-neovim-lib = "0.6.1"
