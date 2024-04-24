@@ -34,7 +34,6 @@
                 return v
               end
             '';
-            # extraPlugins = [avocado];
           };
         };
 
