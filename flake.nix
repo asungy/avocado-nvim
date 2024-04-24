@@ -20,7 +20,21 @@
 
         nvim-overlay = final: prev: {
           dev-nvim = inputs.nixvim.legacyPackages.${system}.makeNixvim {
-            extraPlugins = [avocado];
+            plugins = {
+              packer = {
+                enable = true;
+                plugins = [
+                  "/home/asungy/dev/avocado-nvim"
+                ];
+              };
+            };
+            extraConfigLua = ''
+              P = function(v)
+                print(vim.inspect(v))
+                return v
+              end
+            '';
+            # extraPlugins = [avocado];
           };
         };
 
